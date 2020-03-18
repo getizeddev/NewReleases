@@ -1,0 +1,11 @@
+﻿<Application x:Class="NewReleases.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:NewReleases"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style x:Key="Nunito">
+                <Setter Property="TextElement.FontFamily" Value="Font\Nunito-Light.ttf #Nunito-Light" />
+            </Style>
+    </Application.Resources>
+</Application>

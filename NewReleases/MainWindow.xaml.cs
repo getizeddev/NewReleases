@@ -61,7 +61,7 @@ namespace NewReleases
 
         private void InformationArtist(object sender, MouseButtonEventArgs e)
         {
-            MessageBoxResult boxResult = System.Windows.MessageBox.Show("Would you like to save this albun in the Favourites?", "Save Artist and Album", MessageBoxButton.YesNo);
+            MessageBoxResult boxResult = System.Windows.MessageBox.Show("Would you like to save this album in the Favourites?", "Save Artist and Album", MessageBoxButton.YesNo);
             if (boxResult == MessageBoxResult.Yes)
             {
                 Entries obj = ((FrameworkElement)e.OriginalSource).DataContext as Entries;
@@ -78,6 +78,11 @@ namespace NewReleases
         {
             Window favour = new Fav();
             favour.Show();
+        }
+
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }

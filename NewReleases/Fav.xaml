@@ -8,11 +8,11 @@
         Title="Fav" Height="450" Width="450" WindowStartupLocation="CenterScreen" Background="#18354D">
     <StackPanel Margin="10,6,10,6" Background="#18354D">
         <Grid>
-            <Button Content="Delete Selected" HorizontalAlignment="Left" Height="47" VerticalAlignment="Top" Width="102" Click="Delete_Click" Background="#5C7B95"/>
-            <Button Content="ClearList" HorizontalAlignment="Right" Height="47" VerticalAlignment="Top" Width="102" Click="ClearList_Click" Background="#5C7B95"/>
+            <Button Content="Delete Selected" HorizontalAlignment="Left" Click="Delete_Click" Style="{StaticResource Buttons}"/>
+            <Button Content="ClearList" HorizontalAlignment="Right" Click="ClearList_Click" Style="{StaticResource Buttons}"/>
         </Grid>
         <Grid ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible" Height="350">
-            <ListView Margin="10,24,10,10" Name="ListFavourite" Background="LightGray">
+            <ListView Margin="10,24,10,10" Name="ListFavourite" Background="LightGray" Foreground="Black">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="Artist" Width="200" DisplayMemberBinding="{Binding Path=Item[0]}" TextBlock.TextAlignment="Left"/>

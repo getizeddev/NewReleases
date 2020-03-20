@@ -5,32 +5,45 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NewReleases"
         mc:Ignorable="d"
-        Height="600" Width="600" WindowStartupLocation="CenterScreen" Background="#18354D" WindowStyle="None" AllowsTransparency="True" >
+        Height="600" Width="600" WindowStartupLocation="CenterScreen" Background="#18354D" WindowStyle="None" AllowsTransparency="True">
 
-    <StackPanel Orientation="Vertical" Background="#18354D">
+    <StackPanel Orientation="Vertical" Background="#18354D" >
         <Grid Background="#295880">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
-                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <TextBlock Text="New Releases" VerticalAlignment="Center" Foreground="White" FontSize="15" Margin="5,0,0,0" Grid.Column="0"/>
-            <Button Content="Update" Click="Button_Click" Height="40" Width="100" Background="#5C7B95" Foreground="White" Grid.Column="1"/>
-            <Button Content="Favourite" Click="Button_Click_1"  Height="40" Width="100" HorizontalContentAlignment="Center" Background="#5C7B95" Foreground="White" Grid.Column="2"/>
-            <Button Content="Logout" Height="40" Width="100" Background="#5C7B95" Foreground="White" Click="Close_Click" Grid.Column="3"/>
+            <TextBlock Text="New Releases" VerticalAlignment="Center" Foreground="White" FontSize="15" Margin="5,0,0,0" Grid.Column="1" HorizontalAlignment="Center"/>
+            <Button Height="40" Width="40" Background="Transparent" BorderBrush="Transparent" Click="Close_Click" Grid.Column="2" HorizontalAlignment="Right">
+                <Image Source="Font/switch.png" Height="30" Width="30"/>
+            </Button>
         </Grid>
-        <Grid ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible" Height="550">
-            <ListView Margin="10,24,10,10" Name="MusicReleases" MouseDoubleClick="InformationArtist" Background="LightGray" TextBlock.TextAlignment="Justify" TextBlock.Foreground="Black">
+        <StackPanel Orientation="Horizontal">
+            <Grid Height="300" VerticalAlignment="Top" Margin="0,20,0,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Button Grid.Row="0" Height="60" Width="60" Background="Transparent" BorderBrush="Transparent" Click="Button_Click" VerticalAlignment="Top">
+                        <Image Source="Font/list.png" Height="50" Width="50"/>
+                    </Button>
+                    <Button Grid.Row="1" Height="60" Width="60" Background="Transparent" BorderBrush="Transparent" Click="Button_Click_1">
+                        <Image Source="Font/fav.png" Width="50" Height="50"/>
+                    </Button>
+                </Grid>
+                <Grid ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible" Height="550">
+            <ListView Margin="0,24,0,10" Name="MusicReleases" MouseDoubleClick="InformationArtist" Background="LightGray" TextBlock.TextAlignment="Justify" TextBlock.Foreground="Black">
                     <ListView.View>
                         <GridView>
-                        <GridViewColumn Header="Artist" Width="200" DisplayMemberBinding="{Binding Name}" TextBlock.TextAlignment="Left" />
+                        <GridViewColumn Header="Artist" Width="130" DisplayMemberBinding="{Binding Name}" TextBlock.TextAlignment="Left" />
                         <GridViewColumn Header="Title" Width="120"  DisplayMemberBinding="{Binding Title}" TextBlock.TextAlignment="Left" />
                         <GridViewColumn Header="Genre" Width="70" DisplayMemberBinding="{Binding Genre}" TextBlock.TextAlignment="Left" />
-                        <GridViewColumn Header="Review" Width="Auto" DisplayMemberBinding="{Binding Review}" TextBlock.TextAlignment="Justify" />
+                        <GridViewColumn Header="Review" Width="200" DisplayMemberBinding="{Binding Review}" TextBlock.TextAlignment="Justify"/>
                     </GridView>
                     </ListView.View>
                 </ListView>
             </Grid>
+    </StackPanel>
     </StackPanel>
 </Window>

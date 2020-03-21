@@ -5,11 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NewReleases"
         mc:Ignorable="d"
-        Title="Fav" Height="450" Width="450" WindowStartupLocation="CenterScreen" Background="#18354D">
-    <StackPanel Margin="10,6,10,6" Background="#18354D">
+        Title="Fav" Height="450" Width="450" WindowStartupLocation="CenterScreen" Background="#18354D" Style="{StaticResource Fonty}">
+    <StackPanel Margin="10,6,10,6" Background="#18354D" >
         <Grid>
-            <Button Content="Delete Selected" HorizontalAlignment="Left" Click="Delete_Click" Style="{StaticResource Buttons}"/>
-            <Button Content="ClearList" HorizontalAlignment="Right" Click="ClearList_Click" Style="{StaticResource Buttons}"/>
+            <Button HorizontalAlignment="Left" Click="Delete_Click" Style="{StaticResource Buttons}" IsEnabled="{Binding ElementName=ListFavourite, Path=SelectedItems.Count}" >
+                <Image Source="Font/bin.png" Height="25" Width="35"/>
+            </Button>
+            <Button Content="CLEAR LIST" HorizontalAlignment="Right" Click="ClearList_Click" Style="{StaticResource Buttons}"/>
         </Grid>
         <Grid ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible" Height="350">
             <ListView Margin="10,24,10,10" Name="ListFavourite" Background="LightGray" Foreground="Black">

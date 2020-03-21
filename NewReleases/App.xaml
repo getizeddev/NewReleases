@@ -5,10 +5,25 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <Style x:Key="Buttons" TargetType="Button">
+            <Style.Triggers>
+                <Trigger Property="IsEnabled" Value="True">
+                    <Trigger.Setters>
             <Setter Property="Foreground" Value="White"/>
-            <Setter Property="Background" Value="#5C7B95"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
             <Setter Property="Height" Value="40"/>
-            <Setter Property="Width" Value="100"/>
+            <Setter Property="Width" Value="70"/>
+                    </Trigger.Setters>
+                </Trigger>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Trigger.Setters>
+                        <Setter Property="Visibility" Value="Hidden"/>
+                    </Trigger.Setters>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="Fonty" TargetType="{x:Type Window}">
+            <Setter Property="FontFamily" Value="Font/#Nunito Light"/>
         </Style>
     </Application.Resources>
 </Application>

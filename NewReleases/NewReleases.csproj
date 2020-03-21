@@ -7,8 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Font\bin.png" />
     <None Remove="Font\fav.png" />
     <None Remove="Font\list.png" />
+    <None Remove="Font\Nunito-Light.ttf" />
     <None Remove="Font\switch.png" />
   </ItemGroup>
 
@@ -18,8 +20,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Font\bin.png" />
     <Resource Include="Font\fav.png" />
     <Resource Include="Font\list.png" />
+    <Resource Include="Font\Nunito-Light.ttf" />
     <Resource Include="Font\switch.png" />
   </ItemGroup>
 

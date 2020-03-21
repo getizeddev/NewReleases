@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NewReleases"
         mc:Ignorable="d"
-        Height="600" Width="600" WindowStartupLocation="CenterScreen" Background="#18354D" WindowStyle="None" AllowsTransparency="True">
+        Height="600" Width="600" WindowStartupLocation="CenterScreen" Background="#18354D" WindowStyle="None" AllowsTransparency="True" Style="{StaticResource Fonty}">
 
     <StackPanel Orientation="Vertical" Background="#18354D" >
         <Grid Background="#295880">
@@ -32,14 +32,14 @@
                         <Image Source="Font/fav.png" Width="50" Height="50"/>
                     </Button>
                 </Grid>
-                <Grid ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible" Height="550">
+                <Grid ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible" Height="550" Width="520">
             <ListView Margin="0,24,0,10" Name="MusicReleases" MouseDoubleClick="InformationArtist" Background="LightGray" TextBlock.TextAlignment="Justify" TextBlock.Foreground="Black">
                     <ListView.View>
                         <GridView>
                         <GridViewColumn Header="Artist" Width="130" DisplayMemberBinding="{Binding Name}" TextBlock.TextAlignment="Left" />
                         <GridViewColumn Header="Title" Width="120"  DisplayMemberBinding="{Binding Title}" TextBlock.TextAlignment="Left" />
                         <GridViewColumn Header="Genre" Width="70" DisplayMemberBinding="{Binding Genre}" TextBlock.TextAlignment="Left" />
-                        <GridViewColumn Header="Review" Width="200" DisplayMemberBinding="{Binding Review}" TextBlock.TextAlignment="Justify"/>
+                        <GridViewColumn Header="Review" Width="Auto" DisplayMemberBinding="{Binding Review}" TextBlock.TextAlignment="Justify" />
                     </GridView>
                     </ListView.View>
                 </ListView>

@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data.SQLite;
-using System.IO;
-using System.Text;
 
 namespace NewReleases
 {
@@ -34,20 +31,20 @@ namespace NewReleases
 
         public List<List<string>> ReadData(List<List<string>> lista)
         {
-                SQLiteDataReader read;
-                SQLiteCommand cmd;
-                cmd = conn.CreateCommand();
-                cmd.CommandText = "SELECT * FROM Favourite";
-                read = cmd.ExecuteReader();
-                while (read.Read())
-                {
-                    string name = read.GetString(1);
-                    string title = read.GetString(2);
-                    string genre = read.GetString(3);
-                    //create a list of a list<string> so that can be accessed by binding in the Favourite Screen
-                    lista.Add(new List<string>() { name, title, genre });
-                }
-                return lista;
+            SQLiteDataReader read;
+            SQLiteCommand cmd;
+            cmd = conn.CreateCommand();
+            cmd.CommandText = "SELECT * FROM Favourite";
+            read = cmd.ExecuteReader();
+            while (read.Read())
+            {
+                string name = read.GetString(1);
+                string title = read.GetString(2);
+                string genre = read.GetString(3);
+                //create a list of a list<string> so that can be accessed by binding in the Favourite Screen
+                lista.Add(new List<string>() { name, title, genre });
+            }
+            return lista;
         }
 
         public void DeleteAll()
@@ -63,7 +60,7 @@ namespace NewReleases
             SQLiteCommand cmd = new SQLiteCommand("DELETE FROM Favourite WHERE Title LIKE $art", conn);
             cmd.Parameters.Add("$art", System.Data.DbType.String).Value = Album;
             cmd.ExecuteNonQuery();
-        
+
         }
 
     }

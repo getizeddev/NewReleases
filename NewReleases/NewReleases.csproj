@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Font\addBt.png" />
     <None Remove="Font\bin.png" />
     <None Remove="Font\fav.png" />
     <None Remove="Font\list.png" />
@@ -20,6 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Font\addBt.png" />
     <Resource Include="Font\bin.png" />
     <Resource Include="Font\fav.png" />
     <Resource Include="Font\list.png" />

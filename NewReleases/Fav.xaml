@@ -8,10 +8,18 @@
         Title="Fav" Height="450" Width="450" WindowStartupLocation="CenterScreen" Background="#18354D" Style="{StaticResource Fonty}">
     <StackPanel Margin="10,6,10,6" Background="#18354D" >
         <Grid>
-            <Button HorizontalAlignment="Left" Click="Delete_Click" Style="{StaticResource Buttons}" IsEnabled="{Binding ElementName=ListFavourite, Path=SelectedItems.Count}" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50*"/>
+                <ColumnDefinition Width="235*"/>
+                <ColumnDefinition Width="143*"/>
+            </Grid.ColumnDefinitions>
+            <Button HorizontalAlignment="Center" Style="{StaticResource Buttons}" Width="70" Click="AddWind_Click">
+                <Image Source="Font/addBt.png" Height="25" Width="25"/>
+            </Button>
+            <Button HorizontalAlignment="Left" Click="Delete_Click" Style="{StaticResource Buttons}" IsEnabled="{Binding ElementName=ListFavourite, Path=SelectedItems.Count}" Grid.Column="1" Width="39">
                 <Image Source="Font/bin.png" Height="25" Width="35"/>
             </Button>
-            <Button Content="CLEAR LIST" HorizontalAlignment="Right" Click="ClearList_Click" Style="{StaticResource Buttons}"/>
+            <Button Content="CLEAR LIST" HorizontalAlignment="Left" Click="ClearList_Click" Style="{StaticResource Buttons}" Grid.Column="2" Margin="73,0,0,0" Width="70"/>
         </Grid>
         <Grid ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible" Height="350">
             <ListView Margin="10,24,10,10" Name="ListFavourite" Background="LightGray" Foreground="Black">

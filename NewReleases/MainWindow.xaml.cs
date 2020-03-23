@@ -1,18 +1,7 @@
 ﻿using HtmlAgilityPack;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace NewReleases
 {
@@ -43,7 +32,7 @@ namespace NewReleases
             var node = htmlDoc.DocumentNode.SelectNodes("//div[@class='new-release-items-container']/div[@class='new-release']/div[@class='meta-container']");
             foreach (HtmlNode i in node)
             {
-                Artists.Add(new Entries() 
+                Artists.Add(new Entries()
                 {
                     //Name = i.SelectSingleNode("/div[@class='artist']").InnerText,
                     //Title = i.SelectSingleNode("/div[@class='title']").InnerText,

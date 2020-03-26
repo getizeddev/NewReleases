@@ -35,7 +35,9 @@ namespace NewReleases
         private void AddWind_Click(object sender, RoutedEventArgs e)
         {
             Window Adding = new AddingPopUp();
+            this.Close();
             Adding.Show();
         }
+
     }
 }

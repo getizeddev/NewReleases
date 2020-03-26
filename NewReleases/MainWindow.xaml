@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NewReleases"
         mc:Ignorable="d"
-        Height="600" Width="600" WindowStartupLocation="CenterScreen" Background="#18354D" WindowStyle="None" AllowsTransparency="True" Style="{StaticResource Fonty}">
+        Height="600" Width="600" WindowStartupLocation="CenterScreen" Background="#18354D" WindowStyle="None" AllowsTransparency="True" Style="{StaticResource Fonty}" MouseDown="Window_MouseDown">
 
     <StackPanel Orientation="Vertical" Background="#18354D" >
         <Grid Background="#295880">

@@ -73,5 +73,10 @@ namespace NewReleases
         {
             Application.Current.Shutdown();
         }
+
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
+        }
     }
 }

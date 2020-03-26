@@ -25,8 +25,8 @@
             <ListView Margin="10,24,10,10" Name="ListFavourite" Background="LightGray" Foreground="Black">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="Artist" Width="200" DisplayMemberBinding="{Binding Path=Item[0]}" TextBlock.TextAlignment="Left"/>
-                        <GridViewColumn Header="Title" Width="120"  DisplayMemberBinding="{Binding Path=Item[1]}" TextBlock.TextAlignment="Left"/>
+                        <GridViewColumn Header="Artist" Width="130" DisplayMemberBinding="{Binding Path=Item[0]}" TextBlock.TextAlignment="Left"/>
+                        <GridViewColumn Header="Title" Width="190"  DisplayMemberBinding="{Binding Path=Item[1]}" TextBlock.TextAlignment="Left"/>
                         <GridViewColumn Header="Genre" Width="70" DisplayMemberBinding="{Binding Path=Item[2]}" TextBlock.TextAlignment="Left"/>
                     </GridView>
                 </ListView.View>
